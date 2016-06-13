@@ -6,7 +6,7 @@ Download test data from GitHub: https://github.com/apache/spark/tree/master/data
 
 Compile this project in EclipseScala, generate `spark-machine-learning.jar`, and put this jar into cluster to run.
 
-## Classification & Regression
+## 1. Classification & Regression
 ### NaiveBayesExample
 ```
 spark-submit \
@@ -55,7 +55,7 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
-## Clustering
+## 2. Clustering
 ### KMeansExample
 ```
 spark-submit \
@@ -68,7 +68,7 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
-## Collaborative filtering
+## 3. Collaborative filtering
 ### CollaborativeFilteringExample
 ```
 spark-submit \
