@@ -1,6 +1,8 @@
 # SparkMachineLearning
 
-Download test data from GitHub: https://github.com/apache/spark/tree/master/data/mllib
+Download external lib from: http://archive.apache.org/dist/spark/spark-1.6.0/spark-1.6.0-bin-hadoop2.6.tgz, and `lib/spark-assembly-1.6.0-hadoop2.6.0.jar` is needed.
+
+Download test data from GitHub: https://github.com/apache/spark/tree/master/data/mllib.
 
 ## RegressionExample
 ```
