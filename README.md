@@ -6,31 +6,8 @@ Download test data from GitHub: https://github.com/apache/spark/tree/master/data
 
 Compile this project in EclipseScala, generate `spark-machine-learning.jar`, and put this jar into cluster to run.
 
-## RegressionExample
-```
-spark-submit \
---class RegressionExample \
---master spark://BigData1637:7077 \
---num-executors 6 \
---driver-memory 8g \
---executor-memory 2g \
---executor-cores 2 \
-spark-machine-learning.jar > output
-```
-
-## CollaborativeFilteringExample
-```
-spark-submit \
---class CollaborativeFilteringExample \
---master spark://BigData1637:7077 \
---num-executors 6 \
---driver-memory 8g \
---executor-memory 2g \
---executor-cores 2 \
-spark-machine-learning.jar > output
-```
-
-## NaiveBayesExample
+## Classification & Regression
+### NaiveBayesExample
 ```
 spark-submit \
 --class NaiveBayesExample \
@@ -42,19 +19,7 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
-## KMeansExample
-```
-spark-submit \
---class KMeansExample \
---master spark://BigData1637:7077 \
---num-executors 6 \
---driver-memory 8g \
---executor-memory 2g \
---executor-cores 2 \
-spark-machine-learning.jar > output
-```
-
-## DecisionTreesClassificationExample
+### DecisionTreesClassificationExample
 ```
 spark-submit \
 --class DecisionTreesClassificationExample \
@@ -66,10 +31,48 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
-## DecisionTreesRegressionExample
+### RegressionExample
+```
+spark-submit \
+--class RegressionExample \
+--master spark://BigData1637:7077 \
+--num-executors 6 \
+--driver-memory 8g \
+--executor-memory 2g \
+--executor-cores 2 \
+spark-machine-learning.jar > output
+```
+
+### DecisionTreesRegressionExample
 ```
 spark-submit \
 --class DecisionTreesRegressionExample \
+--master spark://BigData1637:7077 \
+--num-executors 6 \
+--driver-memory 8g \
+--executor-memory 2g \
+--executor-cores 2 \
+spark-machine-learning.jar > output
+```
+
+## Clustering
+### KMeansExample
+```
+spark-submit \
+--class KMeansExample \
+--master spark://BigData1637:7077 \
+--num-executors 6 \
+--driver-memory 8g \
+--executor-memory 2g \
+--executor-cores 2 \
+spark-machine-learning.jar > output
+```
+
+## Collaborative filtering
+### CollaborativeFilteringExample
+```
+spark-submit \
+--class CollaborativeFilteringExample \
 --master spark://BigData1637:7077 \
 --num-executors 6 \
 --driver-memory 8g \
