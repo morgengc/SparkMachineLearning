@@ -68,11 +68,23 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
-## 3. Collaborative filtering
+## 3. Collaborative Filtering
 ### CollaborativeFilteringExample
 ```
 spark-submit \
 --class CollaborativeFilteringExample \
+--master spark://BigData1637:7077 \
+--num-executors 6 \
+--driver-memory 8g \
+--executor-memory 2g \
+--executor-cores 2 \
+spark-machine-learning.jar > output
+```
+
+## 4. Frequent Pattern Mining
+```
+spark-submit \
+--class FPGrowthExample \
 --master spark://BigData1637:7077 \
 --num-executors 6 \
 --driver-memory 8g \
