@@ -82,6 +82,7 @@ spark-machine-learning.jar > output
 ```
 
 ## 4. Frequent Pattern Mining
+### FPGrowthExample
 ```
 spark-submit \
 --class FPGrowthExample \
