@@ -12,7 +12,7 @@ object FPGrowthExample {
 			line.split(" ")
 		}
 
-		// 设置支持度，目的是筛选掉一部分数据
+		// 设置支持度，目的是筛选出频繁项集
 		val fpGrowth = new FPGrowth().setMinSupport(0.5)
 
 		val model = fpGrowth.run(baskets)

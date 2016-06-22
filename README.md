@@ -55,6 +55,18 @@ spark-submit \
 spark-machine-learning.jar > output
 ```
 
+### LogisticRegressionExample
+```
+spark-submit \
+--class LogisticRegressionExample \
+--master spark://BigData1637:7077 \
+--num-executors 6 \
+--driver-memory 8g \
+--executor-memory 2g \
+--executor-cores 2 \
+spark-machine-learning.jar > output
+```
+
 ## 2. Clustering
 ### KMeansExample
 ```

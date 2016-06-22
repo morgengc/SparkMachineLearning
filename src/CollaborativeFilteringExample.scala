@@ -5,16 +5,14 @@ import org.apache.spark.SparkConf
 import org.apache.spark.SparkContext
 
 /*
-协同过滤ALS算法推荐过程如下：
-
-加载数据到 ratings RDD，每行记录包括：user, product, rate
-从 ratings 得到用户商品的数据集：(user, product)
-使用ALS对 ratings 进行训练
-通过 model 对用户商品进行预测评分：((user, product), rate)
-从 ratings 得到用户商品的实际评分：((user, product), rate)
-合并预测评分和实际评分的两个数据集，并求均方差 
+ * 协同过滤ALS算法推荐过程如下：
+ * 加载数据到 ratings RDD，每行记录包括：user, product, rate
+ * 从 ratings 得到用户商品的数据集：(user, product)
+ * 使用ALS对 ratings 进行训练
+ * 通过 model 对用户商品进行预测评分：((user, product), rate)
+ * 从 ratings 得到用户商品的实际评分：((user, product), rate)
+ * 合并预测评分和实际评分的两个数据集，并求均方差 
  */
-
 object CollaborativeFilteringExample {
 	def main(args: Array[String]) {
 		val conf = new SparkConf().setAppName("Spark Machine Learning: CollaborativeFilteringExample")
